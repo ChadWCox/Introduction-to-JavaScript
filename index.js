@@ -35,9 +35,6 @@ let integer = parseInt(carYear, 10);
 
 console.log(integer);
 
-
-
-
 //Task d: Write a function to multiply a*b 
 
 
@@ -47,8 +44,14 @@ console.log(integer);
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+let humanAge = 37;
+let dogYears = 7;
 
 
+function dogYearsAge(humanAge, dogYears){
+    return humanAge * dogYears;
+}
+console.log(dogYearsAge(humanAge, dogYears));
 
 
 
