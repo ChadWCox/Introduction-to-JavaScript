@@ -99,34 +99,6 @@ if(age > 0.166 <= 0.333){
 console.log(dogFeeder(15, 1));
 
 
-
-
-
-
-
-
-
-
-// function dogFeeder(age, weight){
-//     if (age > 0.166 && age <= 0.3333){
-//     return weight * 0.10;
-//     }else if((age > 0.3333) && (age <= 0.583)){
-//         return weight * 0.05;
-//     } else if ((age > 0.583) && (age <= 1)){
-//         return weight * 0.04;
-//     }else if((age >= 1) && (weight <= 5)){
-//         return weight * 0.05;
-//     } else if((age >= 1) && ((weight <= 10) && (weight >= 6))){
-//         return weight * 0.04;
-//     } else if((age >= 1) && ((weight <= 15) && (weight >= 11))){
-//         return weight * 0.03;
-//     } else if((age >= 1) && (weight > 15)){
-//         return weight * 0.02;
-//     }
-// }
-
-// console.log(dogFeeder(1, 15))
-
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
 // Your function should take a string (either rock paper or sissors)
@@ -180,14 +152,20 @@ console.log(compare(myChoice, randomChoice));
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+let kM = 5;
+let miles = (kM * 0.62137);
 
+console.log(miles);
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+let feet = 3;
+let cm = (feet*30.48);
 
+console.log(cm);
 
 
 
