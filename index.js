@@ -28,10 +28,12 @@ if(season === 'Summer'){
 }
 console.log(weather);
 
-
-
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+let carYear = "1999";
+let integer = parseInt(carYear, 10);
+
+console.log(integer);
 
 
 
