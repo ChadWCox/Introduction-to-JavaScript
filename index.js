@@ -1,13 +1,32 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let age = 21;
+const votingAge = 18;
 
-
-
+if (age >= votingAge) {
+    console.log(true); 
+}
+else if (age < votingAge) {
+  console.log(false);
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+let weather = 'Hot';
+let season = 'Spring';
 
-
+if(season === 'Summer'){
+    weather = 'Hot';
+}else if(season === 'Spring'){
+    weather = 'Warm';
+}else if(season === 'Winter'){
+    weather = 'Cold';
+}else if(season === 'Fall'){
+    weather = 'Chilly';
+}else {
+    weather = 'Check the tempurature'
+}
+console.log(weather);
 
 
 
