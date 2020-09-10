@@ -1,23 +1,46 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let age = 21;
+const votingAge = 18;
 
-
-
+if (age >= votingAge) {
+    console.log(true); 
+}
+else if (age < votingAge) {
+  console.log(false);
+}
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
+let weather = 'Hot';
+let season = 'Spring';
 
-
-
-
+if(season === 'Summer'){
+    weather = 'Hot';
+}else if(season === 'Spring'){
+    weather = 'Warm';
+}else if(season === 'Winter'){
+    weather = 'Cold';
+}else if(season === 'Fall'){
+    weather = 'Chilly';
+}else {
+    weather = 'Check the tempurature'
+}
+console.log(weather);
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
+let carYear = "1999";
+let integer = parseInt(carYear, 10);
 
-
-
+console.log(integer);
 
 //Task d: Write a function to multiply a*b 
+
+function myFunction(a, b) {
+    return a * b;
+}
+console.log(myFunction(2, 3));
 
 
 
@@ -26,8 +49,13 @@
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
+let humanAge = 37;
+let dogYears = 7;
 
-
+function dogYearsAge(humanAge, dogYears){
+    return humanAge * dogYears;
+}
+console.log(dogYearsAge(humanAge, dogYears));
 
 
 
@@ -48,9 +76,27 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+// weight in pounds
+// age = 12 // in years
 
+function dogFeeder(weight, age){
+if(age > 0.166 <= 0.333){
+    return weight * 0.10;
+}else if(age > 0.333 <= 0.583){
+    return weight * 0.05;
+}else if(age > 0.583 < 1){
+    return weight * 0.04;
+}else if((age >= 1) && (weight <= 5)){
+    return weight * 0.05;
+}else if((age >=1) && (weight >= 6, weight <= 10)){
+    return weight * 0.04;
+}else if((age >=1) && (weight >= 11, weight <= 15)){
+    return weight * 0.03;
+}else if((age >=1) && (weight > 15)){
+    return weight * 0.02;
+}}
 
+console.log(dogFeeder(15, 1));
 
 
 /************************************************************** Task 4 **************************************************************/
@@ -60,20 +106,66 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+let myChoice = "rock";
+let randomChoice = Math.random();
+if (randomChoice <0.34){
+    randomChoice = "rock";
+}else if(randomChoice <=0.67){
+    randomrChoice = "paper";
+}
+else{
+    randomChoice = "scissors";
+}
+let compare = function(choice1,choice2){
+    if(choice1===choice2){
+        return "tie!";
+    }
+    if(choice1==="rock"){
+        if(choice2==="scissors"){
+            return "rock wins";
+        }
+        else{
+            return "paper wins";
+        }
+    }
+    if(choice1==="paper"){
+        if(choice2==="rock"){
+            return "paper wins";
+        }
+        else{
+            return "scissors wins";
+        }
+    }
+    if(choice1==="scissors"){
+        if(choice2==="rock"){
+            return "rock wins";
+        }
+        else{
+            return "scissors wins";
+        }
+    }
+}
+console.log(compare(myChoice, randomChoice));
   
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+let kM = 5;
+let miles = (kM * 0.62137);
 
+console.log(miles);
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+let feet = 3;
+let cm = (feet*30.48);
 
+console.log(cm);
 
 
 
@@ -81,11 +173,51 @@
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
-
-
-
+// function annoyingSong(bottles) { 
+// var bottles;
+//     for (i = bottles; i >= 1; i = i - 1) {
+//     {
+//         if (i === 1) {
+//             bottles = 'bottle';
+//         }else {
+//             bottles = 'bottles';
+//         }
+//     }
+//     return (i + this.bottles + 'of beer on the wall,');}
+//         {
+//         if (i < 99) } {
+//             return('');}{
+//             return(i+' 'this.bottles' of beer on the wall,');
+//         }
+//         return(i+' 'this.bottles' of beer,');
+//         return('take on down,');
+//         return('pass it around,');
+//         if (i === 1) {
+//             return('no bottles of beer on the wall.')
+//         }}
+function annoyingSong(bottles){
+var bottles;
+for (i = bottles; i >= 1; i = i - 1) 
+{
+    if (i === 1) {
+        bottles = 'bottle';
+    } else {
+        bottles = 'bottles';
+    }
+    console.log(i+" "+bottles+" of soda on the wall,");
+    if (i < 99) {
+        console.log("");
+        console.log(i+" "+bottles+" of soda on the wall,");
+    }
+    console.log(i+" "+bottles+" of soda,");
+    console.log("Take one down,");
+    console.log("Pass it around,");
+    if (i === 1) {
+        console.log("No bottles of soda on the wall.");
+    }
+}}
+annoyingSong(1);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
@@ -94,9 +226,21 @@
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
-  
+function grade(score) {
+    if(score >= 90){
+        return 'Your grade is an A';
+    }else if (score >= 80){
+        return 'Your grade is a B';
+    }else if (score >= 70){
+        return 'Your grade is a C';
+    }else if (score >= 60){
+        return 'Your grade is a D';
+    }else {
+        return 'I am sorry, you have an F';
+    }}
+
+    console.log(grade(75));
   
 
 /************************************************************** Stretch **************************************************************/
@@ -111,8 +255,5 @@
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
 
 
