@@ -76,10 +76,28 @@ console.log(dogYearsAge(humanAge, dogYears));
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+// weight in pounds
+// age = 12 // in years
 
+function dogFeeder(age, weight){
+    if (age > 0.166 && age <= 0.3333){
+    return weight * 0.10;
+    }else if((age > 0.3333) && (age <= 0.583)){
+        return weight * 0.05;
+    } else if ((age > 0.583) && (age <= 1)){
+        return weight * 0.04;
+    }else if((age >= 1) && (weight <= 5)){
+        return weight * 0.05;
+    } else if((age >= 1) && ((weight <= 10) && (weight >= 6))){
+        return weight * 0.04;
+    } else if((age >= 1) && ((weight <= 15) && (weight >= 11))){
+        return weight * 0.03;
+    } else if((age >= 1) && (weight > 15)){
+        return weight * 0.02;
+    }
+}
 
-
+console.log(dogFeeder(1, 15))
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -88,6 +106,46 @@ console.log(dogYearsAge(humanAge, dogYears));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+let myChoice = "rock";
+let randomChoice = Math.random();
+if (randomChoice <0.34){
+    randomChoice = "rock";
+}else if(randomChoice <=0.67){
+    randomrChoice = "paper";
+}
+else{
+    randomChoice = "scissors";
+}
+let compare = function(choice1,choice2){
+    if(choice1===choice2){
+        return "tie!";
+    }
+    if(choice1==="rock"){
+        if(choice2==="scissors"){
+            return "rock wins";
+        }
+        else{
+            return "paper wins";
+        }
+    }
+    if(choice1==="paper"){
+        if(choice2==="rock"){
+            return "paper wins";
+        }
+        else{
+            return "scissors wins";
+        }
+    }
+    if(choice1==="scissors"){
+        if(choice2==="rock"){
+            return "rock wins";
+        }
+        else{
+            return "scissors wins";
+        }
+    }
+}
+console.log(compare(myChoice, randomChoice));
   
   
 
@@ -139,8 +197,5 @@ console.log(dogYearsAge(humanAge, dogYears));
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
 
 
