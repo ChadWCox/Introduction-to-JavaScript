@@ -79,25 +79,53 @@ console.log(dogYearsAge(humanAge, dogYears));
 // weight in pounds
 // age = 12 // in years
 
-function dogFeeder(age, weight){
-    if (age > 0.166 && age <= 0.3333){
+function dogFeeder(weight, age){
+if(age > 0.166 <= 0.333){
     return weight * 0.10;
-    }else if((age > 0.3333) && (age <= 0.583)){
-        return weight * 0.05;
-    } else if ((age > 0.583) && (age <= 1)){
-        return weight * 0.04;
-    }else if((age >= 1) && (weight <= 5)){
-        return weight * 0.05;
-    } else if((age >= 1) && ((weight <= 10) && (weight >= 6))){
-        return weight * 0.04;
-    } else if((age >= 1) && ((weight <= 15) && (weight >= 11))){
-        return weight * 0.03;
-    } else if((age >= 1) && (weight > 15)){
-        return weight * 0.02;
-    }
-}
+}else if(age > 0.333 <= 0.583){
+    return weight * 0.05;
+}else if(age > 0.583 < 1){
+    return weight * 0.04;
+}else if((age >= 1) && (weight <= 5)){
+    return weight * 0.05;
+}else if((age >=1) && (weight >= 6, weight <= 10)){
+    return weight * 0.04;
+}else if((age >=1) && (weight >= 11, weight <= 15)){
+    return weight * 0.03;
+}else if((age >=1) && (weight > 15)){
+    return weight * 0.02;
+}}
 
-console.log(dogFeeder(1, 15))
+console.log(dogFeeder(15, 1));
+
+
+
+
+
+
+
+
+
+
+// function dogFeeder(age, weight){
+//     if (age > 0.166 && age <= 0.3333){
+//     return weight * 0.10;
+//     }else if((age > 0.3333) && (age <= 0.583)){
+//         return weight * 0.05;
+//     } else if ((age > 0.583) && (age <= 1)){
+//         return weight * 0.04;
+//     }else if((age >= 1) && (weight <= 5)){
+//         return weight * 0.05;
+//     } else if((age >= 1) && ((weight <= 10) && (weight >= 6))){
+//         return weight * 0.04;
+//     } else if((age >= 1) && ((weight <= 15) && (weight >= 11))){
+//         return weight * 0.03;
+//     } else if((age >= 1) && (weight > 15)){
+//         return weight * 0.02;
+//     }
+// }
+
+// console.log(dogFeeder(1, 15))
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
