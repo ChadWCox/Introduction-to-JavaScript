@@ -173,11 +173,51 @@ console.log(cm);
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
-
-
-
+// function annoyingSong(bottles) { 
+// var bottles;
+//     for (i = bottles; i >= 1; i = i - 1) {
+//     {
+//         if (i === 1) {
+//             bottles = 'bottle';
+//         }else {
+//             bottles = 'bottles';
+//         }
+//     }
+//     return (i + this.bottles + 'of beer on the wall,');}
+//         {
+//         if (i < 99) } {
+//             return('');}{
+//             return(i+' 'this.bottles' of beer on the wall,');
+//         }
+//         return(i+' 'this.bottles' of beer,');
+//         return('take on down,');
+//         return('pass it around,');
+//         if (i === 1) {
+//             return('no bottles of beer on the wall.')
+//         }}
+function annoyingSong(bottles){
+var bottles;
+for (i = bottles; i >= 1; i = i - 1) 
+{
+    if (i === 1) {
+        bottles = 'bottle';
+    } else {
+        bottles = 'bottles';
+    }
+    console.log(i+" "+bottles+" of soda on the wall,");
+    if (i < 99) {
+        console.log("");
+        console.log(i+" "+bottles+" of soda on the wall,");
+    }
+    console.log(i+" "+bottles+" of soda,");
+    console.log("Take one down,");
+    console.log("Pass it around,");
+    if (i === 1) {
+        console.log("No bottles of soda on the wall.");
+    }
+}}
+annoyingSong(1);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade 
@@ -186,9 +226,21 @@ console.log(cm);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
 
-  
+function grade(score) {
+    if(score >= 90){
+        return 'Your grade is an A';
+    }else if (score >= 80){
+        return 'Your grade is a B';
+    }else if (score >= 70){
+        return 'Your grade is a C';
+    }else if (score >= 60){
+        return 'Your grade is a D';
+    }else {
+        return 'I am sorry, you have an F';
+    }}
+
+    console.log(grade(75));
   
 
 /************************************************************** Stretch **************************************************************/
